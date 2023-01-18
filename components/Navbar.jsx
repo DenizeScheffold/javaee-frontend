@@ -16,7 +16,7 @@ export default function Navbar({ children }) {
                 router.asPath === "/" ? styles.underline : styles.link_styles
               }
             >
-           HOME
+           
             </a>
           </div>
         </Link>
@@ -29,7 +29,7 @@ export default function Navbar({ children }) {
                 router.asPath === "/weather" ? styles.underline : styles.link_styles
               }
             >
-           Weather
+           
             </a>
           </div>
         </Link>
@@ -44,7 +44,7 @@ export default function Navbar({ children }) {
                   : styles.link_styles
               }
             >
-              Profile
+              
             </a>
           </div>
         </Link>
