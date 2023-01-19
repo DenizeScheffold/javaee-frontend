@@ -1,8 +1,9 @@
 import {React, useState, useEffect} from "react";
 import styles from "@/styles/Weather.module.css"
+import Weather from "@/components/Weather";
 
-const Weather = () => {
-    const WEATHER_API_BASE_URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m";
+const WeatherList = () => {
+   // const WEATHER_API_BASE_URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m";
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -39,7 +40,7 @@ const Weather = () => {
                     {weatherData?.map((weather) => (
                         <Weather 
                         weather={weather} 
-                        key={weather.latitude}
+                       // key={weather.latitude}
                         /> 
                     ) )}
         
@@ -50,4 +51,4 @@ const Weather = () => {
     </div>
 
 )};
-export default Weather;
+export default WeatherList;
