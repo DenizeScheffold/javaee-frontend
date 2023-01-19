@@ -1,6 +1,6 @@
-import Navbar from '@/components/Navbar'
-import Weather from '@/weather'
-import Head from 'next/head'
+import Navbar from "@/components/Navbar";
+import WeatherList from "@/components/WeatherList";
+import Head from "next/head";
 //import styles from '@/styles/Home.module.css'
 
 export default function Home() {
@@ -10,11 +10,11 @@ export default function Home() {
         <title>Weather App</title>
       </Head>
 
-      <Navbar/>
+      <Navbar />
 
       <main>
-
+        <WeatherList />
       </main>
     </>
-  )
+  );
 }
