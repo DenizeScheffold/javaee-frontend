@@ -2,7 +2,17 @@ import {React, useState, useEffect} from "react";
 import styles from "@/styles/Weather.module.css"
 import Weather from "@/components/Weather";
 
+export const getServerSideProps = async () => {
+    console.log("Fetch data...");
+    const res = await fetch('http://localhost:8080/api/getUsers');
+    const json = await res.json();
+    return { props: {
+        courses: json
+      }
+    }
+  };
 const WeatherList = () => {
+   
    // const WEATHER_API_BASE_URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m";
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(true);
